@@ -20,4 +20,9 @@ public class VirementController {
     public List<Virement> getAllVirements() {
         return virementService.findAll();
     }
+
+    @PostMapping
+    public Virement createVirement(@RequestBody Virement virement) {
+        return virementService.save(virement);
+    }
 }

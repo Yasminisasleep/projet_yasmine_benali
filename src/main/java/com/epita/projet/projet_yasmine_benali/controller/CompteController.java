@@ -20,4 +20,9 @@ public class CompteController {
     public List<Compte> getAllComptes() {
         return compteService.findAll();
     }
+
+    @PostMapping
+    public Compte createCompte(@RequestBody Compte compte) {
+        return compteService.save(compte);
+    }
 }
